@@ -1,5 +1,6 @@
 package com.example.dissectinglifecycle
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -18,7 +19,16 @@ class FirstActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        setClickListeners()
         Log.d(TAG, "onCreate")
+    }
+
+    private fun setClickListeners() {
+        with(binding) {
+            btnGoToSecondActivity.setOnClickListener {
+                startActivity(Intent(this@FirstActivity, SecondActivity::class.java))
+            }
+        }
     }
 
     override fun onRestart() {
