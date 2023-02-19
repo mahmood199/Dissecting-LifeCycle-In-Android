@@ -4,6 +4,10 @@ A repository dedicated to logging and understanding the lifecycle of activities,
 ## Lifecycle callbacks of activities when launching new activity from another
 ![image](https://user-images.githubusercontent.com/58071934/219962533-cfa0c6e2-0859-4372-80cb-a3f21b17fe11.png)
 
+## and when back button is pressed from new activity
+![image](https://user-images.githubusercontent.com/58071934/219965981-9cbf5985-b729-412e-98e2-4739e96986a8.png)
+
+
 ## Lifecycle callbacks of activity when screen is rotated
 ![image](https://user-images.githubusercontent.com/58071934/219963005-cb98f4ad-e578-41f6-af5f-9676bbde8e96.png)
 
