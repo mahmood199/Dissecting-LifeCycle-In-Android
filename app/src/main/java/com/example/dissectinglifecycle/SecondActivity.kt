@@ -1,15 +1,14 @@
 package com.example.dissectinglifecycle
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import com.example.dissectinglifecycle.databinding.ActivityFirstBinding
+import androidx.appcompat.app.AppCompatActivity
 import com.example.dissectinglifecycle.databinding.ActivitySecondBinding
 
 class SecondActivity : AppCompatActivity() {
 
     companion object {
-        const val TAG = "SecondActivity"
+        const val TAG = "MAHMOOD SecondActivity"
     }
 
     private val binding : ActivitySecondBinding by lazy {
@@ -19,6 +18,7 @@ class SecondActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        Log.d(TAG, "onCreate")
     }
 
     override fun onRestart() {
