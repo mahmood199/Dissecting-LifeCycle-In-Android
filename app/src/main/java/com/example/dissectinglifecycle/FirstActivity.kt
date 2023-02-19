@@ -9,7 +9,7 @@ import com.example.dissectinglifecycle.databinding.ActivityFirstBinding
 class FirstActivity : AppCompatActivity() {
 
     companion object {
-        const val TAG = "FirstActivity"
+        const val TAG = "MAHMOOD FirstActivity"
     }
 
     private val binding : ActivityFirstBinding by lazy {
