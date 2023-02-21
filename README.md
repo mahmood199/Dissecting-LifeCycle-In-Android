@@ -14,5 +14,21 @@ A repository dedicated to logging and understanding the lifecycle of activities,
 ## When device home button is pressed
 ![image](https://user-images.githubusercontent.com/58071934/219965709-28e9a0de-3daf-4a04-afa7-1c1ee6adaf1c.png)
 
-## When User retursn back to app from recents tab
+## When User returns back to app from recents tab
 ![image](https://user-images.githubusercontent.com/58071934/219965767-d4ae152a-57ad-4180-8807-e575f71874b3.png)
+
+
+
+# Fragments
+
+## When fragment is added due to any action
+![image](https://user-images.githubusercontent.com/58071934/220429704-a38d6690-bd5c-4b34-91c4-922f37d28045.png)
+
+## When more fragments are added on of existing fragment.
+### Note how the lifecycle of previously added fragment is not affected when new fragments are *ADDED*
+![image](https://user-images.githubusercontent.com/58071934/220430290-8fca875a-23f6-41bb-bc20-35251bc9c9b5.png)
+
+
+
+
+
