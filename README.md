@@ -29,8 +29,11 @@ Context value is the activity object context which is printed in onAttach
 ### Note how the lifecycle of previously added fragment is not affected when new fragments are *ADDED*
 ![image](https://user-images.githubusercontent.com/58071934/220456137-83f73f44-f936-4e21-8398-4a21e98cd68b.png)
 
+## User navigating away from screen which contained fragment and then returning back (Single Fragment) (With or without backstack same result)
+![image](https://user-images.githubusercontent.com/58071934/220458472-afced65f-74b4-408b-ae22-ebc570272cde.png)
 
-
+## User navigating away from screen which contained fragment and then returning back (Mutiple Fragment) (With or without backstack same result)
+![image](https://user-images.githubusercontent.com/58071934/220461834-637a42f7-0c05-4283-b73b-7ed3f9daad56.png)
 
 
 
