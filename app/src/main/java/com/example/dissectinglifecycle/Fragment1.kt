@@ -22,7 +22,7 @@ class Fragment1 : Fragment() {
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        Log.d(TAG, "onAttach")
+        Log.d(TAG, "onAttach $context")
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
