@@ -25,9 +25,11 @@ A repository dedicated to logging and understanding the lifecycle of activities,
 Context value is the activity object context which is printed in onAttach
 ![image](https://user-images.githubusercontent.com/58071934/220451373-6332327f-154b-4d5a-bf98-a208cdb7245d.png)
 
-## When more fragments are added on of existing fragment.
+## When more fragments are added on top of existing fragment.
 ### Note how the lifecycle of previously added fragment is not affected when new fragments are *ADDED*
-![image](https://user-images.githubusercontent.com/58071934/220430290-8fca875a-23f6-41bb-bc20-35251bc9c9b5.png)
+![image](https://user-images.githubusercontent.com/58071934/220456137-83f73f44-f936-4e21-8398-4a21e98cd68b.png)
+
+
 
 
 
