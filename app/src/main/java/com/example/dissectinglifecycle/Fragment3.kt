@@ -9,6 +9,10 @@ import android.view.ViewGroup
 
 class Fragment3 : Fragment() {
 
+    companion object {
+        const val TAG = "LEARNING Fragment3"
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
