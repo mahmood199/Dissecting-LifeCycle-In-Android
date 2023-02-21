@@ -1,5 +1,6 @@
 package com.example.dissectinglifecycle
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
@@ -30,19 +31,23 @@ class FirstActivity : AppCompatActivity() {
         with(binding) {
             btn1.setOnClickListener {
                 Log.d(TAG, "Any action that tries to add fragment 1")
-                launchFirstFragment(false)
+                launchFirstFragment(true)
             }
 
             btn2.setOnClickListener {
                 Log.d(TAG, "Any action that tries to add fragment 2")
-                launchSecondFragment(false)
+                launchSecondFragment(true)
             }
 
             btn3.setOnClickListener {
                 Log.d(TAG, "Any action that tries to add fragment 3")
-                launchThirdFragment(false)
+                launchThirdFragment(true)
             }
 
+            btn4.setOnClickListener {
+                Log.d(TAG, "Any action that tries to go to next activity")
+                startActivity(Intent(this@FirstActivity, SecondActivity::class.java))
+            }
         }
     }
 
