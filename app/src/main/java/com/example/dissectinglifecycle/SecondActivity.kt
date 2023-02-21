@@ -8,7 +8,7 @@ import com.example.dissectinglifecycle.databinding.ActivitySecondBinding
 class SecondActivity : AppCompatActivity() {
 
     companion object {
-        const val TAG = "MAHMOOD SecondActivity"
+        const val TAG = "LEARNING SecondActivity"
     }
 
     private val binding : ActivitySecondBinding by lazy {
