@@ -21,8 +21,9 @@ A repository dedicated to logging and understanding the lifecycle of activities,
 
 # Fragments
 
-## When fragment is added due to any action
-![image](https://user-images.githubusercontent.com/58071934/220429704-a38d6690-bd5c-4b34-91c4-922f37d28045.png)
+## When fragment is added due to any action 
+Context value is the activity object context which is printed in onAttach
+![image](https://user-images.githubusercontent.com/58071934/220451373-6332327f-154b-4d5a-bf98-a208cdb7245d.png)
 
 ## When more fragments are added on of existing fragment.
 ### Note how the lifecycle of previously added fragment is not affected when new fragments are *ADDED*
