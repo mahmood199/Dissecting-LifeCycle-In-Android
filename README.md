@@ -35,6 +35,8 @@ Context value is the activity object context which is printed in onAttach
 ## User navigating away from screen which contained fragment and then returning back (Mutiple Fragment) (With or without backstack same result)
 ![image](https://user-images.githubusercontent.com/58071934/220461834-637a42f7-0c05-4283-b73b-7ed3f9daad56.png)
 
+## Fragment popped from backstack
+![image](https://user-images.githubusercontent.com/58071934/220466777-46795670-116c-4997-a877-f8178c79a63e.png)
 
 
 
