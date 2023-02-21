@@ -1,6 +1,5 @@
 package com.example.dissectinglifecycle
 
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
@@ -29,39 +28,70 @@ class FirstActivity : AppCompatActivity() {
 
     private fun setClickListeners() {
         with(binding) {
-            btn1.setOnClickListener {
+            addFirstWithoutBackstack.setOnClickListener {
                 Log.d(TAG, "Any action that tries to add fragment 1 without backstack")
-                launchFirstFragment(false)
+                addFirstFragment(false)
             }
 
-            btn2.setOnClickListener {
+            addSecondWithoutBackstack.setOnClickListener {
                 Log.d(TAG, "Any action that tries to add fragment 2 without backstack")
-                launchSecondFragment(false)
+                addSecondFragment(false)
             }
 
-            btn3.setOnClickListener {
+            addThirdWithoutBackstack.setOnClickListener {
                 Log.d(TAG, "Any action that tries to add fragment 3 without backstack")
-                launchThirdFragment(false)
+                addThirdFragment(false)
             }
 
-            btn4.setOnClickListener {
+            addFirstWithBackstack.setOnClickListener {
                 Log.d(TAG, "Any action that tries to add fragment 1 with backstack")
-                launchFirstFragment(true)
+                addFirstFragment(true)
             }
 
-            btn5.setOnClickListener {
+            addSecondWithBackstack.setOnClickListener {
                 Log.d(TAG, "Any action that tries to add fragment 2 with backstack")
-                launchSecondFragment(true)
+                addSecondFragment(true)
             }
 
-            btn6.setOnClickListener {
+            addThirdWithBackstack.setOnClickListener {
                 Log.d(TAG, "Any action that tries to add fragment 3 with backstack")
-                launchThirdFragment(true)
+                addThirdFragment(true)
             }
+
+            replaceFirstWithoutBackstack.setOnClickListener {
+                Log.d(TAG, "Any action that tries to replace fragment 1 without backstack")
+                replaceWithFirstFragment(false)
+            }
+
+            replaceSecondWithoutBackstack.setOnClickListener {
+                Log.d(TAG, "Any action that tries to replace fragment 2 without backstack")
+                replaceWithSecondFragment(false)
+            }
+
+            replaceThirdWithoutBackstack.setOnClickListener {
+                Log.d(TAG, "Any action that tries to replace fragment 3 without backstack")
+                replaceWithThirdFragment(false)
+            }
+
+            replaceFirstWithBackstack.setOnClickListener {
+                Log.d(TAG, "Any action that tries to replace fragment 1 with backstack")
+                replaceWithFirstFragment(true)
+            }
+
+            replaceSecondWithBackstack.setOnClickListener {
+                Log.d(TAG, "Any action that tries to replace fragment 2 with backstack")
+                replaceWithSecondFragment(true)
+            }
+
+            replaceThirdWithBackstack.setOnClickListener {
+                Log.d(TAG, "Any action that tries to replace fragment 3 with backstack")
+                replaceWithThirdFragment(true)
+            }
+
         }
     }
 
-    private fun launchFirstFragment(withBackStack: Boolean) {
+    private fun addFirstFragment(withBackStack: Boolean) {
         if (withBackStack)
             fragmentTransactionDelegate.addFragmentWithBackStack(
                 R.id.fl_fragment_container,
@@ -76,7 +106,7 @@ class FirstActivity : AppCompatActivity() {
             )
     }
 
-    private fun launchSecondFragment(withBackStack: Boolean) {
+    private fun addSecondFragment(withBackStack: Boolean) {
         if (withBackStack)
             fragmentTransactionDelegate.addFragmentWithBackStack(
                 R.id.fl_fragment_container,
@@ -91,7 +121,7 @@ class FirstActivity : AppCompatActivity() {
             )
     }
 
-    private fun launchThirdFragment(withBackStack: Boolean) {
+    private fun addThirdFragment(withBackStack: Boolean) {
         if (withBackStack)
             fragmentTransactionDelegate.addFragmentWithBackStack(
                 R.id.fl_fragment_container,
@@ -105,6 +135,49 @@ class FirstActivity : AppCompatActivity() {
                 Fragment3.TAG
             )
     }
+
+    private fun replaceWithFirstFragment(withBackStack: Boolean) {
+        if(withBackStack)
+            fragmentTransactionDelegate.replaceFragment(
+                R.id.fl_fragment_container,
+                Fragment1(),
+                Fragment1.TAG
+            )
+        else
+            fragmentTransactionDelegate.replaceFragmentWithoutBackStack(
+                R.id.fl_fragment_container,
+                Fragment1(),
+            )
+    }
+
+    private fun replaceWithSecondFragment(withBackStack: Boolean) {
+        if(withBackStack)
+            fragmentTransactionDelegate.replaceFragment(
+                R.id.fl_fragment_container,
+                Fragment2(),
+                Fragment2.TAG
+            )
+        else
+            fragmentTransactionDelegate.replaceFragmentWithoutBackStack(
+                R.id.fl_fragment_container,
+                Fragment2(),
+            )
+    }
+
+    private fun replaceWithThirdFragment(withBackStack: Boolean) {
+        if(withBackStack)
+            fragmentTransactionDelegate.replaceFragment(
+                R.id.fl_fragment_container,
+                Fragment3(),
+                Fragment3.TAG
+            )
+        else
+            fragmentTransactionDelegate.replaceFragmentWithoutBackStack(
+                R.id.fl_fragment_container,
+                Fragment3(),
+            )
+    }
+
 
     override fun onRestart() {
         super.onRestart()
