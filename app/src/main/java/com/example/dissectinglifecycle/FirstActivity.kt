@@ -30,28 +30,33 @@ class FirstActivity : AppCompatActivity() {
     private fun setClickListeners() {
         with(binding) {
             btn1.setOnClickListener {
-                Log.d(TAG, "Any action that tries to add fragment 1")
-                launchFirstFragment(true)
+                Log.d(TAG, "Any action that tries to add fragment 1 without backstack")
+                launchFirstFragment(false)
             }
 
             btn2.setOnClickListener {
-                Log.d(TAG, "Any action that tries to add fragment 2")
-                launchSecondFragment(true)
+                Log.d(TAG, "Any action that tries to add fragment 2 without backstack")
+                launchSecondFragment(false)
             }
 
             btn3.setOnClickListener {
-                Log.d(TAG, "Any action that tries to add fragment 3")
-                launchThirdFragment(true)
+                Log.d(TAG, "Any action that tries to add fragment 3 without backstack")
+                launchThirdFragment(false)
             }
 
             btn4.setOnClickListener {
-                Log.d(TAG, "Any action that tries to go to next activity")
-                Log.d(TAG, "Any action that tries to add fragment")
-                fragmentTransactionDelegate.addFragment(
-                    R.id.fl_fragment_container,
-                    Fragment1(),
-                    Fragment1.TAG
-                )
+                Log.d(TAG, "Any action that tries to add fragment 1 with backstack")
+                launchFirstFragment(true)
+            }
+
+            btn5.setOnClickListener {
+                Log.d(TAG, "Any action that tries to add fragment 2 with backstack")
+                launchSecondFragment(true)
+            }
+
+            btn6.setOnClickListener {
+                Log.d(TAG, "Any action that tries to add fragment 3 with backstack")
+                launchThirdFragment(true)
             }
         }
     }
