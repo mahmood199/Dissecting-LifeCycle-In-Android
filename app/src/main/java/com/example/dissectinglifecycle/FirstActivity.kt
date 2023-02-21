@@ -46,7 +46,12 @@ class FirstActivity : AppCompatActivity() {
 
             btn4.setOnClickListener {
                 Log.d(TAG, "Any action that tries to go to next activity")
-                startActivity(Intent(this@FirstActivity, SecondActivity::class.java))
+                Log.d(TAG, "Any action that tries to add fragment")
+                fragmentTransactionDelegate.addFragment(
+                    R.id.fl_fragment_container,
+                    Fragment1(),
+                    Fragment1.TAG
+                )
             }
         }
     }
