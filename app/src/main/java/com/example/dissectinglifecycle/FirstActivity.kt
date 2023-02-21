@@ -1,5 +1,6 @@
 package com.example.dissectinglifecycle
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
@@ -28,7 +29,23 @@ class FirstActivity : AppCompatActivity() {
 
     private fun setClickListeners() {
         with(binding) {
-            btnGoToSecondActivity.setOnClickListener {
+            btn1.setOnClickListener {
+                Log.d(TAG, "Any action that tries to add fragment 1")
+                launchFirstFragment(true)
+            }
+
+            btn2.setOnClickListener {
+                Log.d(TAG, "Any action that tries to add fragment 2")
+                launchSecondFragment(true)
+            }
+
+            btn3.setOnClickListener {
+                Log.d(TAG, "Any action that tries to add fragment 3")
+                launchThirdFragment(true)
+            }
+
+            btn4.setOnClickListener {
+                Log.d(TAG, "Any action that tries to go to next activity")
                 Log.d(TAG, "Any action that tries to add fragment")
                 fragmentTransactionDelegate.addFragment(
                     R.id.fl_fragment_container,
@@ -37,6 +54,51 @@ class FirstActivity : AppCompatActivity() {
                 )
             }
         }
+    }
+
+    private fun launchFirstFragment(withBackStack: Boolean) {
+        if (withBackStack)
+            fragmentTransactionDelegate.addFragmentWithBackStack(
+                R.id.fl_fragment_container,
+                Fragment1(),
+                Fragment1.TAG
+            )
+        else
+            fragmentTransactionDelegate.addFragment(
+                R.id.fl_fragment_container,
+                Fragment1(),
+                Fragment1.TAG
+            )
+    }
+
+    private fun launchSecondFragment(withBackStack: Boolean) {
+        if (withBackStack)
+            fragmentTransactionDelegate.addFragmentWithBackStack(
+                R.id.fl_fragment_container,
+                Fragment2(),
+                Fragment2.TAG
+            )
+        else
+            fragmentTransactionDelegate.addFragment(
+                R.id.fl_fragment_container,
+                Fragment2(),
+                Fragment2.TAG
+            )
+    }
+
+    private fun launchThirdFragment(withBackStack: Boolean) {
+        if (withBackStack)
+            fragmentTransactionDelegate.addFragmentWithBackStack(
+                R.id.fl_fragment_container,
+                Fragment3(),
+                Fragment3.TAG
+            )
+        else
+            fragmentTransactionDelegate.addFragment(
+                R.id.fl_fragment_container,
+                Fragment3(),
+                Fragment3.TAG
+            )
     }
 
     override fun onRestart() {

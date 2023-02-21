@@ -27,7 +27,7 @@ class Fragment3 : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Log.d(Fragment2.TAG, "onCreate")
+        Log.d(TAG, "onCreate")
     }
 
     override fun onCreateView(
