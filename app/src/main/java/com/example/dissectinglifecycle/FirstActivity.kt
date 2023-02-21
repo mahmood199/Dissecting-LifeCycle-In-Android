@@ -1,18 +1,21 @@
 package com.example.dissectinglifecycle
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import com.example.dissectinglifecycle.databinding.ActivityFirstBinding
 
 class FirstActivity : AppCompatActivity() {
 
-    companion object {
-        const val TAG = "MAHMOOD FirstActivity"
+    private val fragmentTransactionDelegate by lazy {
+        FragmentTransactionDelegate(this, supportFragmentManager)
     }
 
-    private val binding : ActivityFirstBinding by lazy {
+    companion object {
+        const val TAG = "LEARNING FirstActivity"
+    }
+
+    private val binding: ActivityFirstBinding by lazy {
         ActivityFirstBinding.inflate(layoutInflater)
     }
 
@@ -26,7 +29,12 @@ class FirstActivity : AppCompatActivity() {
     private fun setClickListeners() {
         with(binding) {
             btnGoToSecondActivity.setOnClickListener {
-                startActivity(Intent(this@FirstActivity, SecondActivity::class.java))
+                Log.d(TAG, "Any action that tries to add fragment")
+                fragmentTransactionDelegate.addFragment(
+                    R.id.fl_fragment_container,
+                    Fragment1(),
+                    Fragment1.TAG
+                )
             }
         }
     }
