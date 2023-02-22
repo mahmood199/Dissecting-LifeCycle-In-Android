@@ -38,5 +38,8 @@ Context value is the activity object context which is printed in onAttach
 ## Fragment popped from backstack
 ![image](https://user-images.githubusercontent.com/58071934/220466777-46795670-116c-4997-a877-f8178c79a63e.png)
 
+Difference between add and replace transactions
+https://stackoverflow.com/questions/18634207/difference-between-add-replace-and-addtobackstack 
+
 
 
