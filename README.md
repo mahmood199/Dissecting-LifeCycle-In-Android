@@ -115,7 +115,8 @@ Logs for point 4
 ![image](https://user-images.githubusercontent.com/58071934/221024540-a168f557-bd55-4e47-b248-851952ced439.png)
 
 
-
+## Fragment1 and Fragment2 added with backstack and Fragment3 added without backstack. And replaced by fragment 1 without backstack
+![image](https://user-images.githubusercontent.com/58071934/221026429-dfa10119-ec3f-46f7-8f50-9a22a50ff6df.png)
 
 
 
