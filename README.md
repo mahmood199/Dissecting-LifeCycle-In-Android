@@ -67,4 +67,43 @@ https://stackoverflow.com/questions/18634207/difference-between-add-replace-and-
 ![image](https://user-images.githubusercontent.com/58071934/220987597-9bf11c44-09e5-4606-bcc0-336a3d4c10a6.png)
 
 
+Very Very Important -
+1) When there are multiple fragments added on a screen then if back is pressed
+2) or the user returns to the screen from recents tab of device 
+3) or if user goes to new activity 
+4) or returns back from another activity ............. Then the fragment lifecycle will be  
+Then the framgent lifecycle callback methods are called in FIFO order that the order in which they were added on screen.
+Example - Fragment1 added , Fragment2 added, Fragment3 added  then their lifecycle methods will be called IN THAT ORDER.
+
+Logs for point 1
+![image](https://user-images.githubusercontent.com/58071934/220991618-b8b76a9c-58b5-48e5-b8fc-4e0a3c96fe66.png)
+
+Logs for point 2
+![image](https://user-images.githubusercontent.com/58071934/220991717-3aced5dd-ab4f-4d5a-b934-7bd95cbb2b25.png)
+
+Logs for point 3
+![image](https://user-images.githubusercontent.com/58071934/220991232-89e620bd-c8df-4411-9ada-e084c0d612e5.png)
+
+Logs for point 4
+![image](https://user-images.githubusercontent.com/58071934/220991507-c887c888-197e-46bb-a427-037969b28abf.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
