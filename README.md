@@ -42,6 +42,7 @@ Difference between add and replace transactions
 https://stackoverflow.com/questions/18634207/difference-between-add-replace-and-addtobackstack 
 
 ## First fragment added without backstack. Second fragment added via replace method but without backstack
+*Note -* See how onDestroyView(), onDestroy() and OnDetach() method of Fragment1 is also called. 
 ![image](https://user-images.githubusercontent.com/58071934/220916177-52d28a4b-e098-4b05-99b5-cbbf3e2343c3.png)
 
 
