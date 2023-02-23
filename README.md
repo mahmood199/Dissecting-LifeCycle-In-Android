@@ -51,8 +51,9 @@ https://stackoverflow.com/questions/18634207/difference-between-add-replace-and-
 *Note -* See how onDestroyView() method of Fragment1 is also called. 
 ![image](https://user-images.githubusercontent.com/58071934/220919843-2fe334b3-5ab2-4456-9a8f-e64d542d02ea.png)
 
-## When back button is pressed(jutst from above state)
+## When back button is pressed(just from above state)
 ![image](https://user-images.githubusercontent.com/58071934/220922418-4a80e973-a082-410d-a321-e7930d3bf602.png)
 
-
+## 2 fragments(Fragment 1 and Fragment2) added without backstack. Second fragment added via replace method but without backstack
+![image](https://user-images.githubusercontent.com/58071934/220982896-25fe598e-0ecc-4da3-ad14-0d28991cf01c.png)
 
