@@ -54,6 +54,15 @@ https://stackoverflow.com/questions/18634207/difference-between-add-replace-and-
 ## When back button is pressed(just from above state)
 ![image](https://user-images.githubusercontent.com/58071934/220922418-4a80e973-a082-410d-a321-e7930d3bf602.png)
 
-## 2 fragments(Fragment 1 and Fragment2) added without backstack. Second fragment added via replace method but without backstack
+## 2 fragments(Fragment 1 and Fragment2) added without backstack. Third fragment added via replace method but without backstack
+ Also Observe the LIFO order pausing of previously added fragments.
 ![image](https://user-images.githubusercontent.com/58071934/220982896-25fe598e-0ecc-4da3-ad14-0d28991cf01c.png)
+
+## 2 fragments(Fragment 1 and Fragment2) added without backstack. Third fragment added via replace method with backstack
+*Note -* See how onDestroyView() method of Fragment1 is also called. Also Observe the LIFO order pausing of previously added fragments.
+![image](https://user-images.githubusercontent.com/58071934/220985419-4449a984-43db-49d4-b722-8655ce92e315.png)
+
+
+
+
 
