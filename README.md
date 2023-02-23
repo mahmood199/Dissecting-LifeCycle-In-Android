@@ -95,7 +95,8 @@ Logs for point 4
  pressing back button on third fragment will cause LIFO order callbacks for fragment 1 and 2
 ![image](https://user-images.githubusercontent.com/58071934/220996528-91c5ff70-7a13-4729-b5af-a09d10b00052.png)
 
-
+## Back pressed from above state
+![image](https://user-images.githubusercontent.com/58071934/220999452-24ad92a4-3a36-460b-ab6f-569e58e1275e.png)
 
 
 
