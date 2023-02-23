@@ -70,7 +70,7 @@ https://stackoverflow.com/questions/18634207/difference-between-add-replace-and-
 
 
 Very Very Important -
-1) When there are multiple fragments added on a screen then if back is pressed
+1) When there are multiple fragments added on a screen then if device home button is pressed
 2) or the user returns to the screen from recents tab of device 
 3) or if user goes to new activity 
 4) or returns back from another activity ............. Then the fragment lifecycle will be  
