@@ -123,4 +123,7 @@ Logs for point 4
 *Note -* Notice the LIFO order is still maintained while replacing existing fragments with new one.
 ![image](https://user-images.githubusercontent.com/58071934/221028870-24cad06a-ed39-4f58-9226-2ed0267c71ad.png)
 
+## When calling replace with backstack. No fragments will be destroyed completely irrespective of whether they were added with or without back stack. Only their view will be destroyed on replacing with new fragment.
+*Note -* Notice the LIFO order is still maintained while replacing existing fragments with new one.
+![image](https://user-images.githubusercontent.com/58071934/221030996-93221dcd-013b-449b-9bf2-01f689834077.png)
 
