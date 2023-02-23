@@ -68,6 +68,11 @@ class Fragment3 : Fragment() {
         super.onDestroyView()
     }
 
+    override fun onSaveInstanceState(outState: Bundle) {
+        Log.d(TAG, "onSaveInstanceState")
+        super.onSaveInstanceState(outState)
+    }
+
     override fun onDestroy() {
         Log.d(TAG, "onDestroy")
         super.onDestroy()
