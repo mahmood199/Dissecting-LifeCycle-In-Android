@@ -21,6 +21,8 @@ A repository dedicated to logging and understanding the lifecycle of activities,
 
 # Fragments
 
+Note - Create new fragment transaction every time before adding/replacing fragment otherwise while committing on an already committed transaction will throw `commint Already called on transaction exception`. This is because each transaction can be committed only once
+
 ## When fragment is added due to any action 
 Context value is the activity object context which is printed in onAttach
 ![image](https://user-images.githubusercontent.com/58071934/220451373-6332327f-154b-4d5a-bf98-a208cdb7245d.png)
