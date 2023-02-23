@@ -106,7 +106,9 @@ Logs for point 4
 
 
 
-
+## 2 fragments (Fragment1 and Fragment2) Added without backstack and another fragment (Fragment3) is added with backstack. Then Fragment1 is added via replace without backstack. So the previously added fragments which didn't add up to backstack just got completely destroyed(view and fragment instance both + detach). And only the vide of fragment 3 is destroyed and fragment1 is brought to the screen. 
+*Note -* Notice the LIFO order is still maintained while replacing existing fragments with new one.
+![image](https://user-images.githubusercontent.com/58071934/221019813-9b35db7a-915d-4f14-87b6-e558e435bcc8.png)
 
 
 
