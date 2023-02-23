@@ -116,7 +116,7 @@
         android:id="@+id/replace_with_backstack"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/btn_15">
+        app:layout_constraintBottom_toTopOf="@+id/btn_go_to_activity_2">
 
         <Button
             android:id="@+id/replace_first_with_backstack"
@@ -145,7 +145,7 @@
 
 
     <Button
-        android:id="@+id/btn_15"
+        android:id="@+id/btn_go_to_activity_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Go to second activity"

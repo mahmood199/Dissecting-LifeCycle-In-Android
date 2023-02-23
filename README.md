@@ -41,5 +41,69 @@ Context value is the activity object context which is printed in onAttach
 Difference between add and replace transactions
 https://stackoverflow.com/questions/18634207/difference-between-add-replace-and-addtobackstack 
 
+## First fragment added without backstack. Second fragment added via replace method but without backstack
+*Note -* See how onDestroyView(), onDestroy() and OnDetach() method of Fragment1 is also called. 
+![image](https://user-images.githubusercontent.com/58071934/220916177-52d28a4b-e098-4b05-99b5-cbbf3e2343c3.png)
+
+
+
+## First fragment added without backstack. Second fragment added via replace method with backstack
+*Note -* See how onDestroyView() method of Fragment1 is also called. 
+![image](https://user-images.githubusercontent.com/58071934/220919843-2fe334b3-5ab2-4456-9a8f-e64d542d02ea.png)
+
+## When back button is pressed(just from above state)
+![image](https://user-images.githubusercontent.com/58071934/220922418-4a80e973-a082-410d-a321-e7930d3bf602.png)
+
+## 2 fragments(Fragment 1 and Fragment2) added without backstack. Third fragment added via replace method but without backstack
+ Also Observe the LIFO order pausing of previously added fragments.
+![image](https://user-images.githubusercontent.com/58071934/220982896-25fe598e-0ecc-4da3-ad14-0d28991cf01c.png)
+
+## 2 fragments(Fragment 1 and Fragment2) added without backstack. Third fragment added via replace method with backstack
+*Note -* See how onDestroyView() method of Fragment1 is also called. Also Observe the LIFO order pausing of previously added fragments.
+![image](https://user-images.githubusercontent.com/58071934/220985419-4449a984-43db-49d4-b722-8655ce92e315.png)
+
+## When back button is pressed(just from above state)
+*Note -* Also Observe the FIFO order resuming of previously added fragments. understand that fragment 1 was added before fragment 2. and then replace with backstack with 3rd fragment and then back press on third fragment.
+![image](https://user-images.githubusercontent.com/58071934/220987597-9bf11c44-09e5-4606-bcc0-336a3d4c10a6.png)
+
+
+Very Very Important -
+1) When there are multiple fragments added on a screen then if back is pressed
+2) or the user returns to the screen from recents tab of device 
+3) or if user goes to new activity 
+4) or returns back from another activity ............. Then the fragment lifecycle will be  
+Then the framgent lifecycle callback methods are called in FIFO order that the order in which they were added on screen.
+Example - Fragment1 added , Fragment2 added, Fragment3 added  then their lifecycle methods will be called IN THAT ORDER.
+
+Logs for point 1
+![image](https://user-images.githubusercontent.com/58071934/220991618-b8b76a9c-58b5-48e5-b8fc-4e0a3c96fe66.png)
+
+Logs for point 2
+![image](https://user-images.githubusercontent.com/58071934/220991717-3aced5dd-ab4f-4d5a-b934-7bd95cbb2b25.png)
+
+Logs for point 3
+![image](https://user-images.githubusercontent.com/58071934/220991232-89e620bd-c8df-4411-9ada-e084c0d612e5.png)
+
+Logs for point 4
+![image](https://user-images.githubusercontent.com/58071934/220991507-c887c888-197e-46bb-a427-037969b28abf.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
