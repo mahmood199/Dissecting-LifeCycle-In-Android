@@ -99,6 +99,9 @@ Logs for point 4
 ![image](https://user-images.githubusercontent.com/58071934/220999452-24ad92a4-3a36-460b-ab6f-569e58e1275e.png)
 
 
+## Going to new activity from above state
+![image](https://user-images.githubusercontent.com/58071934/221000417-e9e83eda-86a0-4a02-bf7a-d77f974d087d.png)
+
 
 
 
