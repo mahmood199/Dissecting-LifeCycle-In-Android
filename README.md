@@ -116,9 +116,11 @@ Logs for point 4
 
 
 ## Fragment1 and Fragment2 added with backstack and Fragment3 added without backstack. And replaced by fragment 1 without backstack
+*Note -* Notice the LIFO order is still maintained while replacing existing fragments with new one.
 ![image](https://user-images.githubusercontent.com/58071934/221026429-dfa10119-ec3f-46f7-8f50-9a22a50ff6df.png)
 
-
-
+## Fragment1 added with backstack then Fragment2 and Fragment3  added without backstack. And replaced by fragment 1 without backstack
+*Note -* Notice the LIFO order is still maintained while replacing existing fragments with new one.
+![image](https://user-images.githubusercontent.com/58071934/221028870-24cad06a-ed39-4f58-9226-2ed0267c71ad.png)
 
 
