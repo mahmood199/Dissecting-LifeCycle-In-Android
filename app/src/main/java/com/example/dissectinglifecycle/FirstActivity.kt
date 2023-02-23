@@ -1,5 +1,6 @@
 package com.example.dissectinglifecycle
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
@@ -88,6 +89,10 @@ class FirstActivity : AppCompatActivity() {
                 replaceWithThirdFragment(true)
             }
 
+            btnGoToActivity2.setOnClickListener {
+                Log.d(TAG, "Going to Second Activity")
+                startActivity(Intent(this@FirstActivity, SecondActivity::class.java))
+            }
         }
     }
 
