@@ -15,6 +15,10 @@ class SecondActivity : AppCompatActivity() {
         ActivitySecondBinding.inflate(layoutInflater)
     }
 
+    private val fragmentTransactionDelegate by lazy {
+        FragmentTransactionDelegate(this, supportFragmentManager)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)

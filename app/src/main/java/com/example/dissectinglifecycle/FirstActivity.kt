@@ -7,16 +7,16 @@ import com.example.dissectinglifecycle.databinding.ActivityFirstBinding
 
 class FirstActivity : AppCompatActivity() {
 
-    private val fragmentTransactionDelegate by lazy {
-        FragmentTransactionDelegate(this, supportFragmentManager)
-    }
-
     companion object {
         const val TAG = "LEARNING FirstActivity"
     }
 
     private val binding: ActivityFirstBinding by lazy {
         ActivityFirstBinding.inflate(layoutInflater)
+    }
+
+    private val fragmentTransactionDelegate by lazy {
+        FragmentTransactionDelegate(this, supportFragmentManager)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
