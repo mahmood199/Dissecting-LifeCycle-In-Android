@@ -62,7 +62,9 @@ https://stackoverflow.com/questions/18634207/difference-between-add-replace-and-
 *Note -* See how onDestroyView() method of Fragment1 is also called. Also Observe the LIFO order pausing of previously added fragments.
 ![image](https://user-images.githubusercontent.com/58071934/220985419-4449a984-43db-49d4-b722-8655ce92e315.png)
 
-
+## When back button is pressed(just from above state)
+*Note -* Also Observe the FIFO order resuming of previously added fragments. understand that fragment 1 was added before fragment 2. and then replace with backstack with 3rd fragment and then back press on third fragment.
+![image](https://user-images.githubusercontent.com/58071934/220987597-9bf11c44-09e5-4606-bcc0-336a3d4c10a6.png)
 
 
 
