@@ -21,8 +21,6 @@ A repository dedicated to logging and understanding the lifecycle of activities,
 
 # Fragments
 
-Note - Create new fragment transaction every time before adding/replacing fragment otherwise while committing on an already committed transaction will throw `commint Already called on transaction exception`. This is because each transaction can be committed only once
-
 ## When fragment is added due to any action 
 Context value is the activity object context which is printed in onAttach
 ![image](https://user-images.githubusercontent.com/58071934/220451373-6332327f-154b-4d5a-bf98-a208cdb7245d.png)
@@ -70,7 +68,7 @@ https://stackoverflow.com/questions/18634207/difference-between-add-replace-and-
 
 
 Very Very Important -
-1) When there are multiple fragments added on a screen then if device home button is pressed
+1) When there are multiple fragments added on a screen then if back is pressed
 2) or the user returns to the screen from recents tab of device 
 3) or if user goes to new activity 
 4) or returns back from another activity ............. Then the fragment lifecycle will be  
@@ -92,17 +90,10 @@ Logs for point 4
 
 
 
-## 2 fragments(Fragment 1 and Fragment2) added with backstack. Third fragment added via replace method with or without backstack <--- both will produce same results
- Also Observe the LIFO order pausing of previously added fragments. And also that only the views were destroyed of previous fragments no fragments instance.
- pressing back button on third fragment will cause LIFO order callbacks for fragment 1 and 2
-![image](https://user-images.githubusercontent.com/58071934/220996528-91c5ff70-7a13-4729-b5af-a09d10b00052.png)
-
-## Back pressed from above state
-![image](https://user-images.githubusercontent.com/58071934/220999452-24ad92a4-3a36-460b-ab6f-569e58e1275e.png)
 
 
-## Going to new activity from above state
-![image](https://user-images.githubusercontent.com/58071934/221000417-e9e83eda-86a0-4a02-bf7a-d77f974d087d.png)
+
+
 
 
 
