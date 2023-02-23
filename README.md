@@ -110,6 +110,9 @@ Logs for point 4
 *Note -* Notice the LIFO order is still maintained while replacing existing fragments with new one.
 ![image](https://user-images.githubusercontent.com/58071934/221019813-9b35db7a-915d-4f14-87b6-e558e435bcc8.png)
 
+## Same as above but 1 fragment(Fragment1) was Added without backstack and another 2 fragments (Fragment2 and Fragment3) are added with backstack.
+*Note -* Notice the LIFO order is still maintained while replacing existing fragments with new one.
+![image](https://user-images.githubusercontent.com/58071934/221024540-a168f557-bd55-4e47-b248-851952ced439.png)
 
 
 
