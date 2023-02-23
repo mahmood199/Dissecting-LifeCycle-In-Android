@@ -90,8 +90,9 @@ Logs for point 4
 
 
 
-## 2 fragments(Fragment 1 and Fragment2) added with backstack. Third fragment added via replace method but without backstack
+## 2 fragments(Fragment 1 and Fragment2) added with backstack. Third fragment added via replace method with or without backstack <--- both will produce same results
  Also Observe the LIFO order pausing of previously added fragments. And also that only the views were destroyed of previous fragments no fragments instance.
+ pressing back button on third fragment will cause LIFO order callbacks for fragment 1 and 2
 ![image](https://user-images.githubusercontent.com/58071934/220996528-91c5ff70-7a13-4729-b5af-a09d10b00052.png)
 
 
