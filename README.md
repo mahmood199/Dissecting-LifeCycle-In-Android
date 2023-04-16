@@ -106,13 +106,24 @@ Logs for point 4
 
 
 
+## 2 fragments (Fragment1 and Fragment2) Added without backstack and another fragment (Fragment3) is added with backstack. Then Fragment1 is added via replace without backstack. So the previously added fragments which didn't add up to backstack just got completely destroyed(view and fragment instance both + detach). And only the vide of fragment 3 is destroyed and fragment1 is brought to the screen. 
+*Note -* Notice the LIFO order is still maintained while replacing existing fragments with new one.
+![image](https://user-images.githubusercontent.com/58071934/221019813-9b35db7a-915d-4f14-87b6-e558e435bcc8.png)
+
+## Same as above but 1 fragment(Fragment1) was Added without backstack and another 2 fragments (Fragment2 and Fragment3) are added with backstack.
+*Note -* Notice the LIFO order is still maintained while replacing existing fragments with new one.
+![image](https://user-images.githubusercontent.com/58071934/221024540-a168f557-bd55-4e47-b248-851952ced439.png)
 
 
+## Fragment1 and Fragment2 added with backstack and Fragment3 added without backstack. And replaced by fragment 1 without backstack
+*Note -* Notice the LIFO order is still maintained while replacing existing fragments with new one.
+![image](https://user-images.githubusercontent.com/58071934/221026429-dfa10119-ec3f-46f7-8f50-9a22a50ff6df.png)
 
+## Fragment1 added with backstack then Fragment2 and Fragment3  added without backstack. And replaced by fragment 1 without backstack
+*Note -* Notice the LIFO order is still maintained while replacing existing fragments with new one.
+![image](https://user-images.githubusercontent.com/58071934/221028870-24cad06a-ed39-4f58-9226-2ed0267c71ad.png)
 
-
-
-
-
-
+## When calling replace with backstack. No fragments will be destroyed completely irrespective of whether they were added with or without back stack. Only their view will be destroyed on replacing with new fragment.
+*Note -* Notice the LIFO order is still maintained while replacing existing fragments with new one.
+![image](https://user-images.githubusercontent.com/58071934/221030996-93221dcd-013b-449b-9bf2-01f689834077.png)
 
