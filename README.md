@@ -18,6 +18,17 @@ A repository dedicated to logging and understanding the lifecycle of activities,
 ![image](https://user-images.githubusercontent.com/58071934/219965767-d4ae152a-57ad-4180-8807-e575f71874b3.png)
 
 
+## Task Modes in Android
+1. standard
+2. singleTop
+3. singleTask
+4. singleInstance
+
+# 1. singleTop
+- If an instance of the activity already exists at the top of the current task and the system routes the intent to this activity, no new instance will be created because it will fire off an onNewIntent() method instead of creating a new object. If there is no instance of this at the top then it relaunches the activity.
+
+
+
 
 # Fragments
 
