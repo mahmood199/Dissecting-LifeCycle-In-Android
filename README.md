@@ -19,15 +19,24 @@ A repository dedicated to logging and understanding the lifecycle of activities,
 
 
 ## Task Modes in Android
-1. standard
-2. singleTop
-3. singleTask
-4. singleInstance
+1. standard  --|--
+2. singleTop --|--
+3. singleTask --||--
+4. singleInstance --||--
+5. singleInstancePerTask --||--
 
-# 1. singleTop
+# 1. standard
+- Creates and launches new instance of the activity every time.
+
+# 2. singleTop
 - If an instance of the activity already exists at the top of the current task and the system routes the intent to this activity, no new instance will be created because it will fire off an onNewIntent() method instead of creating a new object. If there is no instance of this at the top then it relaunches the activity.
 
+TaskAffinity - Preference of the activity regarding with which task it will associate itself. By default all activities have the same affinity. Hence they belong to the same task. This affinity is package affinity, basically package name.
+To change taskAffinity for an activity we specify the android:taskAffinity="some random name"
 
+# 3. singleTask
+1. without taskAffinity -
+2. with taskAffinity - 
 
 
 # Fragments
