@@ -25,23 +25,32 @@ A repository dedicated to logging and understanding the lifecycle of activities,
 4. singleInstance --||--
 5. singleInstancePerTask --||--
 
-# 1. standard
+## 1. standard
 - Creates and launches new instance of the activity every time.
 
-# 2. singleTop
+## 2. singleTop
 - If an instance of the activity already exists at the top of the current task and the system routes the intent to this activity, no new instance will be created because it will fire off an onNewIntent() method instead of creating a new object. If there is no instance of this at the top then it relaunches the activity.
 
 TaskAffinity - Preference of the activity regarding with which task it will associate itself. Basically the task in which they will be launched. By default all activities have the same affinity. Hence they belong to the same task. This affinity is package affinity, basically package name.
-To change taskAffinity for an activity we specify the android:taskAffinity="some random name"
+To change taskAffinity for an activity we specify the android:taskAffinity="some random name". 
+This enables us to switch between different tasks of the same application from recents tab of device.
 
-# 3. singleTask
+## 3. singleTask
 1. with taskAffinity - if we launch our activity with a task affinity then it will open up in new task. Any activity launched by this activity will be kept in its task as it shares the affinity of the root activity ![image](https://github.com/mahmood199/Dissecting-LifeCycle-In-Android/assets/58071934/e18fd105-7017-4907-90b4-a8849f53b6c9)
 In a nutshell, it means that
 singleTask activity will always be at the root of task.
-there will be only one instance of activity across tasks
+there will be only one instance of activity across tasks.
+Also in the recents tab, we will see 2 tasks of same application.
 
 2. without taskAffinity - if there is no instance of activity in the task then a new instance is created and launched. But if its there then it will simply intercept the intent via onNewIntentn() method.
 If there are some actvities stacked on top of singleTask activity and it is launched again then all above activities gets popped off the task. Also if there's no affinity then it isn't necessary that it will be present at the root of the task
+
+## 4. singleInstance
+1. with taskAffinity - new activity is launched in a new task. if new activities are launched from this activity then those activities will be launched in original task. Also this activity will be the only activity instance in the new task
+Also in the recents tab, we will see 2 tasks of same application.
+
+2. without taskAffinity - new activity is launched in a new task. if new activities are launched from this activity then those activities will be launched in original task. Also this activity will be the only activity instance in the new task. Also in the recents tab, we will see only 1 task of same application.
+
 
 
 # Fragments
