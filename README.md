@@ -52,6 +52,33 @@ Also in the recents tab, we will see 2 tasks of same application.
 2. without taskAffinity - new activity is launched in a new task. if new activities are launched from this activity then those activities will be launched in original task. Also this activity will be the only activity instance in the new task. Also in the recents tab, we will see only 1 task of same application.
 
 
+## Fragment Transaction actions
+Intro - Committing fragment transaction via commit() after onSaveInstanceState() will throw IllegalStateException.
+
+#### commit() -
+Asynchronous
+Schedules a commit of this transaction. The commit does not happen immediately; it will be scheduled as work on the main thread to be done the next time that thread is ready.
+A transaction can only be committed with this method prior to its containing activity saving its state. If the commit is attempted after that point, an exception will be thrown. This is because the state after the commit can be lost if the activity needs to be restored from its state. 
+
+#### commitNow()
+Synchronous
+cant add fragment to backstack with this method. However it immediately schedules the work by placing it at the front of the queue. 
+Transactions committed in this way may not be added to the FragmentManager's back stack,as doing so would break other expected ordering guarantees for other asynchronously committed transactions.
+cant add fragment to backstack with this method. However it immediately schedules the work by placing it at the front of the queue. 
+
+#### commitAllowingStateLoss()
+Asynchronous
+Schedules a commit of this transaction. The commit does not happen immediately; it will be scheduled as work on the main thread to be done the next time that thread is ready.
+A transaction can be committed with this method after its containing activity saving its state. If the commit is attempted after that point it wont be saved to fragment manager so state would be lost. So whether it is adding/removing/replacing fragment it wont happen take place.
+
+#### commitNowAllowingStateLoss()
+Synchronous
+Like commitNow but allows the commit to be executed after an activity's state is saved. Remaining is similar to commitAllowinfStateLoss()
+
+
+### Difference between commitNow() vs commit() followed by executePendingTransactions()
+Calling commitNow is preferable to calling commit() followed by FragmentManager.executePendingTransactions() as the latter will have the side effect of attempting to commit all currently pending transactions
+
 
 # Fragments
 
